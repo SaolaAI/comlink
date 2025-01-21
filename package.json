@@ -1,11 +1,14 @@
 {
-  "name": "comlink",
+  "name": "@saola.ai/comlink",
   "version": "4.4.2",
   "description": "Comlink makes WebWorkers enjoyable",
   "main": "dist/umd/comlink.js",
   "module": "dist/esm/comlink.mjs",
   "types": "dist/umd/comlink.d.ts",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rollup -c",
     "test:unit": "karma start",
@@ -18,12 +21,12 @@
     "watchtest": "CHROME_ONLY=1 karma start --no-single-run"
   },
   "author": {
-    "name": "Surma",
-    "email": "surma@google.com"
+    "name": "Shay Malchi",
+    "email": "shay@saola.ai"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoogleChromeLabs/comlink.git"
+    "url": "git@github.com:SaolaAI/comlink.git"
   },
   "license": "Apache-2.0",
   "devDependencies": {

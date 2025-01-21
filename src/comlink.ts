@@ -382,7 +382,7 @@ export function expose(
         ep.postMessage({ ...wireValue, id }, transferables);
       });
   } as any);
-  if (ep.start) {
+  if (typeof ep.start === "function") {
     ep.start();
   }
 }
@@ -630,7 +630,7 @@ function requestResponseMessage(
   return new Promise((resolve) => {
     const id = generateUUID();
     pendingListeners.set(id, resolve);
-    if (ep.start) {
+    if (typeof ep.start === "function") {
       ep.start();
     }
     ep.postMessage({ id, ...msg }, transfers);
